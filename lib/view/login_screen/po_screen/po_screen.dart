@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:intl/intl.dart';
 import 'package:po/controller/po_controller.dart';
 import 'package:po/view/login_screen/po_screen/item_details.dart';
+import 'package:po/view/login_screen/po_screen/ro_screen.dart';
 
   class PurchaseOrderView extends StatelessWidget {
   final controller = Get.put(PurchaseOrderController());
@@ -14,8 +15,16 @@ import 'package:po/view/login_screen/po_screen/item_details.dart';
     return WillPopScope(
       onWillPop: () async => false,
       child: Scaffold(
+        floatingActionButton: FloatingActionButton(
+          backgroundColor: Colors.white,
+          onPressed: (){
+          Get.to(PlaceOrderScreen());
+        },
+        child: Icon(Icons.add,color: Colors.black,),
+        ),
         backgroundColor: Colors.black,
         appBar: AppBar(
+          
           backgroundColor: Colors.black,
 
           leading:
